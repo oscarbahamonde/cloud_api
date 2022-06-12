@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = {extras = ["all"], version = "*"}
+sqlmodel = "*"
+faunadb = "*"
+pulumi = "*"
+pulumi-aws = "*"
+pulumi-cloudflare = "*"
+geocoder = "*"
+pytube = "*"
+qrcode = "*"
+fastapi-cloudauth = "*"
+pillow = "*"
+rich = "*"
+
+[dev-packages]
+yapf = "*"
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+dev = "uvicorn app:CloudApi --host '0.0.0.0' --port 3000 --reload"
